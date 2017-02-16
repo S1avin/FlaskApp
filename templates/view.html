@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+        <title>View</title>
+    </head>
+
+    <body>
+        <br>
+        <br>
+        <center>
+        <div class="container">
+        <div class="row">
+                <form action="/view" method='GET', 'POST'>
+                    <input type="ID" name="invid" value="{{request.form.invid}}">>
+                    <input type="submit" value="Submit">
+                    {% if invid %}
+                    You said: {{ invid }}
+                    {% endif %}
+                </form>
+        </div>
+        <div class="row">
+            <a href="/">Back to Main</a>
+        </div>
+        </div>
+        </center>
+    </body>
+</html>
