@@ -20,7 +20,7 @@ def create():
             cur = con.cursor()
             cur.execute("CREATE TABLE Item(invid INT, title TEXT, location INT. weight TEXT)")
     except lite.Error, e:
-        return (str(e)
+        return (str(e))
 
 
 """
