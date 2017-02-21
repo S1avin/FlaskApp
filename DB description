@@ -1,0 +1,16 @@
+DB - Inventory
+Table - item
+Columm:
+  invid INT(5), title VARCHAR(90), location INT(5), weight DECIMAL, list_date DATE
+  
+  mysql> DESCRIBE item;
++-----------+---------------+------+-----+---------+-------+
+| Field     | Type          | Null | Key | Default | Extra |
++-----------+---------------+------+-----+---------+-------+
+| invid     | int(5)        | YES  |     | NULL    |       |
+| title     | varchar(90)   | YES  |     | NULL    |       |
+| location  | int(5)        | YES  |     | NULL    |       |
+| weight    | decimal(10,0) | YES  |     | NULL    |       |
+| list_date | date          | YES  |     | NULL    |       |
++-----------+---------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
