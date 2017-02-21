@@ -1,17 +1,27 @@
 
 # A very simple Flask Hello World app for you to get started with...
 from flask import Flask, render_template, request
-#from flask_mysqldb import MySQL
-#
-#
+import sqlite3 as lite
+
 app = Flask(__name__)
-#mysql=MySQL(app)
+con = None
 
 
 
 @app.route("/")
 def index():
     return render_template('index.html')
+
+@app.route("/create")
+def create():
+    con = lite.connect('Inventory.db')
+    try:
+        with con:
+            cur = con.cursor()
+            cur.execute("CREATE TABLE Item(invid INT, title TEXT, location INT. weight TEXT)")
+    except lite.Error, e:
+        return (str(e)
+
 
 """
 @app.route("/view", methods=['GET', 'POST'])
